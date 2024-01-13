@@ -7,7 +7,7 @@ import { ProveedoresComponent } from './Views/proveedores/proveedores.component'
 import { StocksComponent } from './Views/stocks/stocks.component';
 import { NuevoProveedorComponent } from './Views/proveedores/nuevo-proveedor/nuevo-proveedor.component';
 import { NuevoProductoComponent } from './views/productos/nuevo-producto/nuevo-producto.component';
-
+import { NuevoStockComponent } from './views/stocks/nuevo-stock/nuevo-stock.component';
 export const routes: Routes = [
   {
     path: 'dashboard',
@@ -33,12 +33,20 @@ export const routes: Routes = [
     component: NuevoProductoComponent,
   },
   {
+    path: 'nuevo-stock',
+    component: NuevoStockComponent,
+  },
+  {
     path: 'editar-proveedor/:id',
     component: NuevoProveedorComponent,
   },
   {
     path: 'editar-producto/:id',
     component: NuevoProductoComponent,
+  },
+  {
+    path: 'editar-stock/:id',
+    component: NuevoStockComponent,
   },
   { path: 'login', component: LoginComponent },
   { path: '**', component: PageNotFoundComponentComponent },

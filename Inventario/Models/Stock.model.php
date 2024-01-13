@@ -7,7 +7,7 @@ class Clase_Stock
         try {
             $con = new Clase_Conectar_Base_Datos();
             $con = $con->ProcedimientoConectar();
-            $cadena = "SELECT * FROM `Stocks`";
+            $cadena = "SELECT * FROM `stocks`";
             $result = mysqli_query($con, $cadena);
             return $result;
         } catch (Throwable $th) {
@@ -21,7 +21,7 @@ class Clase_Stock
         try {
             $con = new Clase_Conectar_Base_Datos();
             $con = $con->ProcedimientoConectar();
-            $cadena = "SELECT * FROM `Stocks` WHERE StockId=$StockId";
+            $cadena = "SELECT * FROM `stocks` WHERE StockId=$StockId";
             $result = mysqli_query($con, $cadena);
             return $result;
         } catch (Throwable $th) {
@@ -35,7 +35,7 @@ class Clase_Stock
         try {
             $con = new Clase_Conectar_Base_Datos();
             $con = $con->ProcedimientoConectar();
-            $cadena = "INSERT INTO `Stocks`( `ProductoId`, `ProveedorId`, `Cantidad`, `Precio_Venta`) VALUES ('$ProductoId','$ProveedorId',$Cantidad,'$Precio_Venta')";
+            $cadena = "INSERT INTO `stocks`( `ProductoId`, `ProveedorId`, `Cantidad`, `Precio_Venta`) VALUES ('$ProductoId','$ProveedorId',$Cantidad,'$Precio_Venta')";
             $result = mysqli_query($con, $cadena);
             return 'ok';
         } catch (Throwable $th) {
@@ -49,7 +49,7 @@ class Clase_Stock
         try {
             $con = new Clase_Conectar_Base_Datos();
             $con = $con->ProcedimientoConectar();
-            $cadena = "UPDATE `Stocks` SET `ProductoId`='$ProductoId',`ProveedorId`='$ProveedorId',`Cantidad`='$Cantidad',`Precio_Venta`='$Precio_Venta' WHERE `StockId`=$StockId";
+            $cadena = "UPDATE `stocks` SET `ProductoId`='$ProductoId',`ProveedorId`='$ProveedorId',`Cantidad`='$Cantidad',`Precio_Venta`='$Precio_Venta' WHERE `StockId`=$StockId";
             $result = mysqli_query($con, $cadena);
             return "ok";
         } catch (Throwable $th) {
@@ -63,7 +63,7 @@ class Clase_Stock
         try {
             $con = new Clase_Conectar_Base_Datos();
             $con = $con->ProcedimientoConectar();
-            $cadena = "delete from Stocks where StockId=$StockId";
+            $cadena = "delete from stocks where StockId=$StockId";
             $result = mysqli_query($con, $cadena);
             return "ok";
         } catch (Throwable $th) {
